@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import logoGameLegends from "../../src/assets/logoGameLegends.png"
+import logoGameLegends from '../../assets/logoGameLegends.png'
 import {AiOutlineUser} from "react-icons/ai"
 import {FiSearch} from "react-icons/fi"
 
@@ -9,7 +9,7 @@ function Navbar() {
     <div className={styles.navContainer}>
       <div className={styles.topNavContainer}>
         <div>
-          <img className={styles.logo} src={logoGameLegends} alt="logo" />
+          <img className={styles.logo} src={logoGameLegends} alt="logo game legends" />
         </div>
         <div className={styles.searchContainer}>
           <input className={styles.search}/>
