@@ -4,6 +4,7 @@ import logoGameLegends from '../../assets/logoGameLegends.png'
 import {AiOutlineUser} from "react-icons/ai"
 import {FiSearch} from "react-icons/fi"
 
+
 function Navbar() {
   return (
     <div className={styles.navContainer}>
