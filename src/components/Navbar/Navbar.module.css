@@ -44,23 +44,24 @@
 
 }
 
-.ulContainer {
-  margin: 0;
+.NavbarLinks {
+  margin:0;
   background-color: #FEAE34 ;
-  display: flex;
-  justify-content: center;
-}
-.ulNavbar {
-  margin: 0;
+  font-weight: 600;
   list-style: none;
   font-size: 20px;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 ;
+  gap: 40px;
 }
 
-.ulNavbar li {
-  margin: 0 40px;
-  font-weight: 600;
+.link {
+  text-decoration: none;
+  color: black;
 }
+
+
+

@@ -4,3 +4,8 @@
   border: 0;
   font-size: 100%;
 }
+
+.App {
+  min-height: 100vh;
+  position: relative;
+}

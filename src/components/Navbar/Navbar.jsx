@@ -3,6 +3,7 @@ import styles from "./Navbar.module.css";
 import logoGameLegends from '../../assets/logoGameLegends.png'
 import {AiOutlineUser} from "react-icons/ai"
 import {FiSearch} from "react-icons/fi"
+import { Link } from "react-router-dom";
 
 
 function Navbar() {
@@ -20,16 +21,14 @@ function Navbar() {
           <AiOutlineUser className={styles.user}/>
         </div>
       </div>
-      <div className={styles.ulContainer}>
-        <ul className={styles.ulNavbar}>
-          <li>Home</li>
-          <li>Games</li>
-          <li>Companies</li>
-          <li>Platform</li>
-          <li>Add New</li>
-        </ul>
+        <div className={styles.NavbarLinks}>
+          <Link className={styles.link} to={'/'}>Home</Link>
+          <Link className={styles.link} to={'/games'}>Games</Link>
+          <Link className={styles.link} to={''}>Companies</Link>
+          <Link className={styles.link} to={''}>Platform</Link>
+          <Link className={styles.link} to={''}>Add New</Link>
+        </div>
       </div>
-    </div>
   );
 }
 
