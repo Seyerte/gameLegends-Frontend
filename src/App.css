@@ -8,4 +8,9 @@
 .App {
   min-height: 100vh;
   position: relative;
+  
+}
+.content {
+  padding-top: 150px;
+  padding-bottom: 50px; 
 }

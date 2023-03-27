@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import apiServices from '../../apiServices/gameServices'
 import GameCard from '../gameCard/GameCard';
+import styles from './GameList.module.css'
 
 
 export default function GameList() {
@@ -16,7 +17,7 @@ export default function GameList() {
 
 
   return (
-    <div>
+    <div className={styles.gameList}>
     {game.map((game)=> (
       <GameCard
       key={game.id}
