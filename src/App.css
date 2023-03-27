@@ -8,6 +8,8 @@
 .App {
   min-height: 100vh;
   position: relative;
+  background: linear-gradient(180deg, #000000 0%, rgba(84, 82, 82, 0) 48.26%, #FEAE34 100%);
+  
   
 }
 .content {
