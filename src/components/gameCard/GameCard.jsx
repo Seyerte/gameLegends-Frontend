@@ -5,7 +5,7 @@ import styles from './GameCard.module.css'
 export default function GameCard({game}) {
   return (
     <div className={styles.gameCard}>
-      <Link to={`/gamedetail/${game.id}`}>
+      <Link className={styles.link} to={`/gamedetail/${game.id}`}>
       <img 
         className={styles.img} 
         src={game.img} 

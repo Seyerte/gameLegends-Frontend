@@ -19,3 +19,8 @@
   font-size: 20px;
   line-height: 1.2;
 }
+
+.link {
+  text-decoration: none;
+  color: black;
+}
