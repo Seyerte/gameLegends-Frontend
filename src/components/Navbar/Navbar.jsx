@@ -26,7 +26,7 @@ function Navbar() {
           <Link className={styles.link} to={'/games'}>Games</Link>
           <Link className={styles.link} to={''}>Companies</Link>
           <Link className={styles.link} to={''}>Platform</Link>
-          <Link className={styles.link} to={''}>Add New</Link>
+          <Link className={styles.link} to={'/games/add'}>Add New</Link>
         </div>
       </div>
   );

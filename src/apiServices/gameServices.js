@@ -10,6 +10,11 @@ const gameServices = {
   getGameById(id){
   return axios.get(url + `/${id}`)
   .then((res) => res.data) 
+  },
+
+  create(game){
+    return axios.post(url, game)
+      .then((res) => res.data)
   }
 }
 

@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar';
 import GameDetail from './pages/GameDetail/GameDetail';
 import Games from './pages/Games/Games';
 import Home from './pages/Home/Home';
+import GameForm from './pages/GameForm/GameForm';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/games' element={<Games/>}/>
         <Route path='/gamedetail/:id' element={<GameDetail/>}/>
+        <Route path ='/games/add' element={<GameForm/>}/>
       </Routes>
       </div>
       <Footer/>
