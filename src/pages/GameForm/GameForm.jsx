@@ -7,13 +7,14 @@ const addNewGame = {
   title: '',
   genre: '',
   platform: '',
-  imgUrl: '',
+  img: '',
 };
 
 export default function GameForm() {
 
   const [newGame, setNewGame] = useState (addNewGame);
   const navigator = useNavigate ();
+
 
   const handlerSubmit = async (e) => {
     e.preventDefault();
@@ -32,76 +33,91 @@ export default function GameForm() {
       ...newGame,
       [e.target.name]: e.target.value,
     });
+    
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <form onSubmit={handlerSubmit}>
-      <div className={styles.formGroup}>
-          <label htmlFor="title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            value={newGame.title}
-            onChange={handleOnChange}
-            name= "title"
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="genre">Genre:</label>
-          <select
-            id="genre"
-            value={newGame.genre}
-            onChange={handleOnChange}
-            name= "genre"
-            required
-          >
-            <option value="">-- Select genre --</option>
-            <option value="Action">Action</option>
-            <option value="Adventure">Adventure</option>
-            <option value="RPG">RPG</option>
-            <option value="Strategy">Strategy</option>
-            <option value="Sports">Sports</option>
-          </select>
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="platform">Platform:</label>
-          <select
-            id="platform"
-            value={newGame.platform}
-            onChange={handleOnChange}
-            name= "platform"
-            required
-          >
-            <option value="">-- Select platform --</option>
-            <option value="PC">PC</option>
-            <option value="PlayStation">Ps4</option>
-            <option value="PlayStation">Ps5</option>
-            <option value="Xbox">Xbox</option>
-            <option value="Nintendo">Nintendo</option>
-          </select>
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="imgUrl">Image URL:</label>
-          <input
-            type="text"
-            id="imgUrl"
-            value={newGame.imgUrl}
-            onChange={handleOnChange}
-            name= "imgUrl"
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="imgPreview">Image preview:</label>
-          <img
-            id="imgPreview"
-            className={styles.imgPreview}
-            src={newGame.imgUrl  === '' ? 'https://maxler.com/local/templates/maxler/assets/img/not-found.png' : newGame.imgUrl}
-            alt={newGame.title}
+      <div>
+        <div className={styles.formContainer}>
+          <div className={styles.formGroup}>
+            <label htmlFor="title">Title:</label>
+            <input
+              type="text"
+              id="title"
+              value={newGame.title}
+              onChange={handleOnChange}
+              name= "title"
+              required
             />
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="genre">Genre:</label>
+            <select
+              id="genre"
+              value={newGame.genre}
+              onChange={handleOnChange}
+              name= "genre"
+              required
+            >
+              <option value="">-- Select genre --</option>
+              <option value="Action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="RPG">RPG</option>
+              <option value="Strategy">Strategy</option>
+              <option value="Sports">Sports</option>
+            </select>
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="platform">Platform:</label>
+            <select
+              id="platform"
+              value={newGame.platform}
+              onChange={handleOnChange}
+              name= "platform"
+              required
+            >
+              <option value="">-- Select platform --</option>
+              <option value="PC">PC</option>
+              <option value="PlayStation">Ps4</option>
+              <option value="PlayStation">Ps5</option>
+              <option value="Xbox">Xbox</option>
+              <option value="Nintendo">Nintendo</option>
+            </select>
+          </div>
+          <div className={styles.formGroup}>
+            <label htmlFor="img">Image URL:</label>
+            <input
+              type="text"
+              id="img"
+              value={newGame.img}
+              onChange={handleOnChange}
+              name= "img"
+            />
+          </div>
         </div>
-        <button type="submit">Add game</button>
+        <div className={styles.imgContainer}>
+          <div className={styles.formGroup}>
+            <label htmlFor="imgPreview">Image preview:</label>
+            <img
+              id="imgPreview"
+              className={styles.imgPreview}
+              src={
+              newGame.img !== ''
+                ? newGame.img
+                : 'https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg'
+              }
+              alt={newGame.title}
+              />
+          </div>
+        </div>
+        </div>
+        <div>
+        <div>
+          <button type="submit">Add game</button>
+        </div>
+        </div>
       </form>
     </div>
   )
